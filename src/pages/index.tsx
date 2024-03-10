@@ -133,7 +133,7 @@ export default function Home(props: PropsHome) {
     setPakTimeStampList((prevPakTimeStampList) => {
       const updatedPakTimeStampList = [...prevPakTimeStampList];
       if (updatedPakTimeStampList[index].pak !== undefined) {
-        if (typeof (updatedPakTimeStampList[index].pak[name as keyof Pak]) === 'number') { 
+        if (typeof ((updatedPakTimeStampList[index].pak as Pak)[name as keyof Pak]) === 'number') { 
           value = Number(value)
         }
         const pak = {
